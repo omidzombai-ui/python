@@ -1,0 +1,267 @@
+<!-- ========================= -->
+<!-- index.html -->
+<!-- ========================= -->
+
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>
+    ZS Sport AI
+  </title>
+
+  <!-- FONT -->
+
+  <link rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+  <!-- VIDEO BACKGROUND -->
+
+  <div class="video-background">
+
+    <video
+      autoplay
+      muted
+      loop
+      playsinline
+      id="bgVideo"
+    >
+
+      <source
+        src="./gym-video.mp4"
+        type="video/mp4"
+      >
+
+    </video>
+
+    <div class="video-overlay"></div>
+
+  </div>
+
+  <!-- MAIN -->
+
+  <main class="container">
+
+    <div class="login-wrapper">
+
+      <!-- LEFT -->
+
+      <section class="hero">
+
+        <div class="badge">
+
+          <span></span>
+
+          AI Powered Sport Platform
+
+        </div>
+
+        <h1>
+
+          Train slimmer.<br>
+          Presteer beter.
+
+        </h1>
+
+        <p>
+
+          Open jouw sportdashboard en genereer
+          je sportschema en laat je maaltijden
+          automatisch bepalen door AI.
+
+        </p>
+
+        <div class="features">
+
+          <div class="feature">
+
+            ⚡ Live prestaties
+
+          </div>
+
+          <div class="feature">
+
+            📊 AI analyses
+
+          </div>
+
+          <div class="feature">
+
+            🥗 AI maaltijden
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- RIGHT -->
+
+      <section class="login-card">
+
+        <div class="logo">
+
+          <div class="logo-mark">
+
+            ZS
+
+          </div>
+
+          <div>
+
+            <strong>
+
+              ZS Sport AI
+
+            </strong>
+
+            <br>
+
+            <small>
+
+              Next Generation Sports Platform
+
+            </small>
+
+          </div>
+
+        </div>
+
+        <h2>
+
+          Welkom in de sportwereld 👋
+
+        </h2>
+
+        <p class="subtitle">
+
+          Log in om je sportomgeving te openen
+
+        </p>
+
+        <form id="loginForm">
+
+          <div class="input-group">
+
+            <label>
+
+              Gebruikersnaam
+
+            </label>
+
+            <input
+              type="text"
+              id="username"
+              placeholder="Voer je gebruikersnaam in"
+              required
+            >
+
+          </div>
+
+          <div class="input-group">
+
+            <label>
+
+              Wachtwoord
+
+            </label>
+
+            <input
+              type="password"
+              id="password"
+              placeholder="Voer je wachtwoord in"
+              required
+            >
+
+          </div>
+
+          <div class="options">
+
+            <label>
+
+              <input type="checkbox">
+
+              Onthoud mij
+
+            </label>
+
+            <a href="#">
+
+              Wachtwoord vergeten?
+
+            </a>
+
+          </div>
+
+          <button
+            type="submit"
+            class="login-btn"
+          >
+
+            Inloggen
+
+          </button>
+
+        </form>
+
+        <div class="divider">
+
+          OF
+
+        </div>
+
+        <div class="socials">
+
+          <button class="social-btn">
+
+            Google
+
+          </button>
+
+          <button class="social-btn">
+
+            Apple
+
+          </button>
+
+        </div>
+
+      </section>
+
+    </div>
+
+  </main>
+
+  <!-- JS -->
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,541 @@
+/* ========================= */
+/* ZS SPORT AI - FINAL CSS */
+/* ========================= */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html,
+body{
+  width:100%;
+  height:100%;
+}
+
+body{
+  font-family:'Inter',sans-serif;
+  overflow:hidden;
+  color:white;
+  background:#000;
+}
+
+/* ========================= */
+/* VIDEO BACKGROUND */
+/* ========================= */
+
+.video-background{
+  position:fixed;
+  top:0;
+  left:0;
+
+  width:100%;
+  height:100%;
+
+  z-index:-10;
+
+  overflow:hidden;
+}
+
+.video-background video{
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  /* VIDEO MEER ZICHTBAAR */
+
+  filter:
+    brightness(0.78)
+    saturate(1.2);
+}
+
+/* OVERLAY */
+
+.video-overlay{
+  position:absolute;
+  inset:0;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(2,6,23,0.18),
+      rgba(37,99,235,0.08),
+      rgba(6,182,212,0.05)
+    );
+}
+
+/* ========================= */
+/* MAIN */
+/* ========================= */
+
+.container{
+  width:100%;
+  min-height:100vh;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  padding:40px;
+}
+
+/* ========================= */
+/* LOGIN WRAPPER */
+/* ========================= */
+
+.login-wrapper{
+  width:100%;
+  max-width:1200px;
+
+  display:grid;
+  grid-template-columns:1fr 480px;
+
+  border-radius:32px;
+
+  overflow:hidden;
+
+  position:relative;
+}
+
+/* ========================= */
+/* HERO */
+/* ========================= */
+
+.hero{
+  padding:70px;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+
+  /* ALLEEN ACHTER TEKST DONKER */
+
+  background:
+    linear-gradient(
+      to right,
+      rgba(2,6,23,0.45),
+      rgba(2,6,23,0.18),
+      transparent
+    );
+}
+
+/* BADGE */
+
+.badge{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+
+  width:max-content;
+
+  padding:12px 18px;
+
+  border-radius:999px;
+
+  background:rgba(255,255,255,0.08);
+
+  border:1px solid rgba(255,255,255,0.1);
+
+  margin-bottom:30px;
+
+  backdrop-filter:blur(10px);
+}
+
+.badge span{
+  width:12px;
+  height:12px;
+
+  background:#22c55e;
+
+  border-radius:50%;
+
+  box-shadow:0 0 15px #22c55e;
+}
+
+/* HERO TITLES */
+
+.hero h1{
+  font-size:64px;
+  line-height:1;
+
+  font-weight:800;
+
+  margin-bottom:24px;
+
+  background:
+    linear-gradient(
+      to right,
+      #ffffff,
+      #60a5fa
+    );
+
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+/* HERO TEXT */
+
+.hero p{
+  color:#f1f5f9;
+
+  font-size:18px;
+
+  line-height:1.7;
+
+  max-width:520px;
+
+  margin-bottom:40px;
+}
+
+/* FEATURES */
+
+.features{
+  display:flex;
+  flex-wrap:wrap;
+  gap:18px;
+}
+
+.feature{
+  padding:16px 20px;
+
+  border-radius:18px;
+
+  background:rgba(255,255,255,0.06);
+
+  border:1px solid rgba(255,255,255,0.08);
+
+  color:#f1f5f9;
+
+  transition:0.3s;
+
+  backdrop-filter:blur(10px);
+}
+
+.feature:hover{
+  transform:translateY(-4px);
+
+  background:rgba(255,255,255,0.12);
+}
+
+/* ========================= */
+/* LOGIN CARD */
+/* ========================= */
+
+.login-card{
+  padding:60px 45px;
+
+  /* MEER DOORZICHTIG */
+
+  background:rgba(15,23,42,0.22);
+
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+
+  border-left:1px solid rgba(255,255,255,0.08);
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+
+  position:relative;
+
+  overflow:hidden;
+}
+
+/* EXTRA GLASS EFFECT */
+
+.login-card::before{
+  content:"";
+
+  position:absolute;
+  inset:0;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,0.05),
+      rgba(255,255,255,0.01)
+    );
+
+  pointer-events:none;
+}
+
+/* LOGO */
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:14px;
+
+  margin-bottom:40px;
+
+  position:relative;
+  z-index:2;
+}
+
+.logo-mark{
+  width:55px;
+  height:55px;
+
+  border-radius:18px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #2563eb,
+      #06b6d4
+    );
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  font-size:20px;
+  font-weight:800;
+
+  box-shadow:
+    0 10px 25px rgba(37,99,235,0.5);
+}
+
+.logo small{
+  color:#cbd5e1;
+}
+
+/* LOGIN TITLES */
+
+.login-card h2{
+  font-size:34px;
+
+  margin-bottom:10px;
+
+  position:relative;
+  z-index:2;
+}
+
+.subtitle{
+  color:#cbd5e1;
+
+  margin-bottom:35px;
+
+  position:relative;
+  z-index:2;
+}
+
+/* FORM */
+
+.input-group{
+  margin-bottom:22px;
+
+  position:relative;
+  z-index:2;
+}
+
+.input-group label{
+  display:block;
+
+  margin-bottom:10px;
+
+  color:#f1f5f9;
+}
+
+.input-group input{
+  width:100%;
+
+  padding:18px 20px;
+
+  border:none;
+  outline:none;
+
+  border-radius:18px;
+
+  background:rgba(255,255,255,0.08);
+
+  border:1px solid rgba(255,255,255,0.12);
+
+  color:white;
+
+  font-size:15px;
+
+  transition:0.3s;
+}
+
+.input-group input::placeholder{
+  color:#cbd5e1;
+}
+
+.input-group input:focus{
+  border-color:#3b82f6;
+
+  background:rgba(255,255,255,0.12);
+
+  box-shadow:
+    0 0 0 4px rgba(59,130,246,0.2);
+}
+
+/* OPTIONS */
+
+.options{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  margin-bottom:28px;
+
+  color:#e2e8f0;
+
+  font-size:14px;
+
+  position:relative;
+  z-index:2;
+}
+
+.options a{
+  color:#7dd3fc;
+
+  text-decoration:none;
+}
+
+/* BUTTON */
+
+.login-btn{
+  width:100%;
+
+  padding:18px;
+
+  border:none;
+
+  border-radius:18px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #2563eb,
+      #06b6d4
+    );
+
+  color:white;
+
+  font-size:16px;
+  font-weight:700;
+
+  cursor:pointer;
+
+  transition:0.3s;
+
+  position:relative;
+  z-index:2;
+
+  box-shadow:
+    0 12px 25px rgba(37,99,235,0.35);
+}
+
+.login-btn:hover{
+  transform:translateY(-3px);
+
+  box-shadow:
+    0 18px 35px rgba(37,99,235,0.45);
+}
+
+/* DIVIDER */
+
+.divider{
+  text-align:center;
+
+  margin:30px 0;
+
+  color:#cbd5e1;
+
+  position:relative;
+  z-index:2;
+}
+
+.divider::before,
+.divider::after{
+  content:"";
+
+  position:absolute;
+  top:50%;
+
+  width:40%;
+  height:1px;
+
+  background:rgba(255,255,255,0.12);
+}
+
+.divider::before{
+  left:0;
+}
+
+.divider::after{
+  right:0;
+}
+
+/* SOCIALS */
+
+.socials{
+  display:flex;
+  gap:14px;
+
+  position:relative;
+  z-index:2;
+}
+
+.social-btn{
+  flex:1;
+
+  padding:14px;
+
+  border-radius:16px;
+
+  border:1px solid rgba(255,255,255,0.12);
+
+  background:rgba(255,255,255,0.06);
+
+  color:white;
+
+  cursor:pointer;
+
+  transition:0.3s;
+}
+
+.social-btn:hover{
+  transform:translateY(-2px);
+
+  background:rgba(255,255,255,0.14);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:950px){
+
+  .login-wrapper{
+    grid-template-columns:1fr;
+  }
+
+  .hero{
+    display:none;
+  }
+
+  .login-card{
+    border-left:none;
+  }
+
+}
+
+@media(max-width:600px){
+
+  .container{
+    padding:20px;
+  }
+
+  .login-card{
+    padding:40px 25px;
+  }
+
+  .hero h1{
+    font-size:42px;
+  }
+
+}
