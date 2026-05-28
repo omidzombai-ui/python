@@ -41,6 +41,8 @@ loginForm.addEventListener("submit", function(e){
 
     button.disabled = false;
 
+    window.location.href = "dashboard.html";
+
   }, 2000);
 
 });
