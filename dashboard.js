@@ -16,7 +16,7 @@ const profileBtn = document.querySelector(".profile-btn");
 
 profileBtn.addEventListener("click", () => {
 
-  alert("Welkom in jouw profiel pagina 👤");
+  window.location.href = "profiel.html";
 
 });
 
