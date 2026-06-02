@@ -486,6 +486,55 @@ nav a:hover{
   color:#cbd5e1;
 }
 
+.generate-btn{
+  width:100%;
+  margin-top:16px;
+  padding:16px 22px;
+  border:none;
+  border-radius:18px;
+  background:rgba(56,189,248,0.18);
+  color:#dbeafe;
+  font-size:16px;
+  font-weight:600;
+  cursor:pointer;
+  transition:0.25s ease;
+}
+
+.generate-btn:hover{
+  background:rgba(56,189,248,0.28);
+}
+
+.generate-result{
+  margin-top:18px;
+  padding:20px;
+  border-radius:18px;
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(255,255,255,0.12);
+}
+
+.generate-result h3{
+  margin:0 0 10px;
+  color:#e2e8f0;
+}
+
+.generate-result p{
+  margin:0;
+  color:#cbd5e1;
+  line-height:1.75;
+}
+
+.generate-result .item-title{
+  margin:0 0 8px;
+  font-size:18px;
+  font-weight:700;
+  color:#f8fafc;
+}
+
+.generate-result .item-desc{
+  margin:0;
+  color:#cbd5e1;
+}
+
 /* ========================= */
 /* RESPONSIVE */
 /* ========================= */
