@@ -1,3 +1,7 @@
+/* ========================= */
+/* ZS SPORT AI TRAININGEN */
+/* ========================= */
+
 *{
   margin:0;
   padding:0;
@@ -5,11 +9,16 @@
 }
 
 body{
-  font-family:Inter,sans-serif;
+  font-family:Inter, Arial, sans-serif;
+  min-height:100vh;
   color:white;
-  overflow:hidden;
-  background:black;
+  background:#000;
+  overflow-x:hidden;
 }
+
+/* ========================= */
+/* VIDEO BACKGROUND */
+/* ========================= */
 
 .video-background{
   position:fixed;
@@ -23,8 +32,8 @@ body{
   object-fit:cover;
 
   filter:
-    brightness(0.55)
-    saturate(1.2);
+  brightness(.45)
+  saturate(1.2);
 }
 
 .video-overlay{
@@ -32,55 +41,72 @@ body{
   inset:0;
 
   background:
-    linear-gradient(
-      135deg,
-      rgba(2,6,23,0.6),
-      rgba(37,99,235,0.18),
-      rgba(6,182,212,0.1)
-    );
+  linear-gradient(
+    135deg,
+    rgba(2,6,23,.75),
+    rgba(37,99,235,.15),
+    rgba(6,182,212,.08)
+  );
 }
 
+/* ========================= */
+/* CONTAINER */
+/* ========================= */
+
 .container{
+
+  width:min(1400px,95%);
+
+  margin:auto;
+
   min-height:100vh;
 
   display:grid;
 
   grid-template-columns:
-  1fr
-  420px
+  1.2fr
+  380px
   420px;
 
-  gap:25px;
+  gap:20px;
 
-  padding:40px;
+  align-items:center;
+
+  padding:30px 0;
 }
 
-.hero-section{
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
+/* ========================= */
+/* HERO */
+/* ========================= */
 
-  padding:50px;
+.hero-section{
+  padding-right:20px;
 }
 
 .badge{
-  display:inline-block;
 
-  width:max-content;
+  display:inline-block;
 
   padding:12px 18px;
 
   border-radius:999px;
 
-  background:rgba(255,255,255,0.08);
+  margin-bottom:20px;
 
-  margin-bottom:25px;
+  background:
+  rgba(255,255,255,.08);
+
+  border:
+  1px solid rgba(255,255,255,.08);
 }
 
 .hero-section h1{
-  font-size:70px;
 
-  margin-bottom:25px;
+  font-size:58px;
+
+  line-height:1.1;
+
+  margin-bottom:20px;
 
   background:
   linear-gradient(
@@ -94,82 +120,122 @@ body{
 }
 
 .hero-section p{
-  max-width:600px;
+
+  color:#dbeafe;
 
   line-height:1.8;
 
-  color:#e2e8f0;
+  margin-bottom:30px;
 
-  margin-bottom:35px;
+  max-width:600px;
 }
 
 .features{
+
   display:flex;
+
   flex-wrap:wrap;
-  gap:15px;
+
+  gap:12px;
 }
 
 .feature{
-  padding:14px 18px;
 
-  border-radius:16px;
+  padding:12px 16px;
 
-  background:rgba(255,255,255,0.08);
+  border-radius:14px;
+
+  background:
+  rgba(255,255,255,.08);
 
   backdrop-filter:blur(10px);
+
+  border:
+  1px solid rgba(255,255,255,.08);
 }
+
+/* ========================= */
+/* CARDS */
+/* ========================= */
 
 .generator-card,
 .result-card{
-  align-self:center;
 
-  padding:30px;
+  width:100%;
+
+  background:
+  rgba(255,255,255,.08);
+
+  backdrop-filter:blur(18px);
+
+  border:
+  1px solid rgba(255,255,255,.08);
 
   border-radius:28px;
 
-  background:rgba(255,255,255,0.08);
-
-  backdrop-filter:blur(14px);
-
-  border:1px solid rgba(255,255,255,0.08);
+  padding:25px;
 }
 
 .generator-card h2,
 .result-card h2{
-  margin-bottom:25px;
+  margin-bottom:20px;
 }
+
+/* ========================= */
+/* INPUTS */
+/* ========================= */
 
 .generator-card input,
 .generator-card select{
+
+  width:100%;
+
+  padding:15px;
+
+  margin-bottom:14px;
+
+  border:none;
+
+  outline:none;
+
+  border-radius:16px;
+
+  color:white;
+
+  background:
+  rgba(255,255,255,.08);
+
+  border:
+  1px solid rgba(255,255,255,.08);
+}
+
+.generator-card input::placeholder{
+  color:#cbd5e1;
+}
+
+.generator-card option{
+  color:black;
+}
+
+/* ========================= */
+/* BUTTON */
+/* ========================= */
+
+.generator-card button{
+
   width:100%;
 
   padding:16px;
-
-  margin-bottom:15px;
 
   border:none;
 
   border-radius:16px;
 
-  background:rgba(255,255,255,0.08);
-
-  color:white;
-}
-
-.generator-card button{
-  width:100%;
-
-  padding:18px;
-
-  border:none;
-
-  border-radius:18px;
-
   cursor:pointer;
 
-  color:white;
-
   font-weight:700;
+
+  color:white;
 
   background:
   linear-gradient(
@@ -177,31 +243,166 @@ body{
     #2563eb,
     #06b6d4
   );
+
+  transition:.3s;
 }
 
+.generator-card button:hover{
+
+  transform:translateY(-2px);
+}
+
+/* ========================= */
+/* RESULT */
+/* ========================= */
+
 #schema{
-  line-height:2;
+  margin-top:10px;
 }
 
 .training-item{
-  padding:16px;
 
-  border-radius:16px;
+  padding:16px;
 
   margin-bottom:12px;
 
-  background:rgba(255,255,255,0.06);
+  border-radius:16px;
+
+  background:
+  rgba(255,255,255,.05);
+
+  border:
+  1px solid rgba(255,255,255,.05);
 }
+
+.training-item h3{
+  margin-bottom:10px;
+}
+
+.training-item p{
+  color:#dbeafe;
+  margin:6px 0;
+}
+
+/* ========================= */
+/* CHECKBOX */
+/* ========================= */
+
+.exercise{
+
+  padding:12px;
+
+  margin-bottom:10px;
+
+  border-radius:14px;
+
+  background:
+  rgba(255,255,255,.05);
+}
+
+.exercise label{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:12px;
+
+  cursor:pointer;
+}
+
+.exercise-check{
+
+  width:20px;
+  height:20px;
+
+  accent-color:#06b6d4;
+}
+
+/* ========================= */
+/* PROGRESS */
+/* ========================= */
+
+.progress-box{
+  margin-bottom:20px;
+}
+
+.progress-text{
+  margin-bottom:8px;
+}
+
+.progress-bar{
+
+  height:12px;
+
+  background:
+  rgba(255,255,255,.08);
+
+  border-radius:999px;
+
+  overflow:hidden;
+}
+
+#progressFill{
+
+  width:0%;
+
+  height:100%;
+
+  background:
+  linear-gradient(
+    90deg,
+    #2563eb,
+    #06b6d4
+  );
+
+  transition:.4s;
+}
+
+/* ========================= */
+/* TABLET */
+/* ========================= */
 
 @media(max-width:1200px){
 
   .container{
-    grid-template-columns:1fr;
-    overflow-y:auto;
+
+    grid-template-columns:
+    1fr;
+
+    align-items:start;
+
+    padding:25px;
   }
 
-  body{
-    overflow:auto;
+  .hero-section{
+
+    padding-right:0;
   }
 
+  .generator-card,
+  .result-card{
+
+    max-width:none;
+  }
+}
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+
+@media(max-width:768px){
+
+  .hero-section h1{
+    font-size:42px;
+  }
+
+  .hero-section p{
+    font-size:15px;
+  }
+
+  .container{
+    width:95%;
+    padding:20px 0;
+  }
 }
