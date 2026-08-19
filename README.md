@@ -1,100 +1,172 @@
-# Sportwebsite – Wedstrijdenpagina
+# ZS Sport AI 🏋️🤖
 
-## Studentgegevens
+## 1. Inleiding
 
-- **Studentnaam:** ALI Ahangaran
-- **Studentnummer:** 97114576
-## Projectgegevens
+ZS Sport AI is een moderne sportwebsite.
 
-### Naam van het project
+De website is gemaakt voor mensen die willen sporten en hun
+sportprestaties willen bijhouden.
 
-**Sportwebsite – Wedstrijdenpagina**
+De website helpt de gebruiker met:
 
-### Beschrijving van het project
+- Sporten
+- Trainingen
+- Voeding
+- AI sportadvies
+- Sportrecords
+- Vooruitgang
 
-Voor dit project maak ik een moderne sportwebsite met een overzichtelijke wedstrijdenpagina. Op deze pagina kunnen gebruikers informatie over sportwedstrijden bekijken.
+Het project bestaat uit meerdere pagina's.
+Alle pagina's hebben ongeveer dezelfde stijl.
 
-De wedstrijdenpagina laat bijvoorbeeld zien welke wedstrijden gepland staan, wanneer een wedstrijd plaatsvindt, welke teams tegen elkaar spelen en waar de wedstrijd wordt gespeeld.
+---
 
-Het doel is om de informatie duidelijk en overzichtelijk aan de gebruiker te presenteren. De website wordt responsive gemaakt, zodat deze goed werkt op een computer, tablet en telefoon.
+# 2. Doel van het project
 
-### Waarom wil ik dit project maken?
+Het doel van ZS Sport AI is om een handige en moderne sportwebsite
+te maken.
 
-Ik wil dit project maken omdat ik geïnteresseerd ben in sport en het ontwikkelen van websites. Met dit project wil ik mijn kennis en vaardigheden op het gebied van webdevelopment verbeteren.
+De gebruiker kan op één plek zijn trainingen en prestaties bekijken.
 
-Ik wil leren hoe ik een professionele en gebruiksvriendelijke website kan maken. Daarnaast wil ik leren hoe ik informatie op een duidelijke manier kan presenteren.
+De website moet makkelijk te gebruiken zijn.
 
-Door een wedstrijdenpagina te maken, kan ik oefenen met HTML, CSS en JavaScript. Ook wil ik leren hoe ik mijn website kan testen, fouten kan oplossen en feedback kan verwerken.
+De gebruiker kan bijvoorbeeld:
 
-## Randvoorwaarden
+1. Inloggen
+2. Het dashboard bekijken
+3. Een training kiezen
+4. Een trainingsschema maken
+5. Oefeningen uitvoeren
+6. Oefeningen afvinken
+7. Voortgang bekijken
+8. Sportrecords bekijken
+9. Nieuwe records toevoegen
+10. Informatie over maaltijden bekijken
 
-Bij het ontwikkelen van mijn sportwebsite moet ik rekening houden met verschillende randvoorwaarden.
+---
 
-### AVG
+# 3. Voor wie is de website?
 
-Ik moet rekening houden met de Algemene Verordening Gegevensbescherming (AVG). Ik verzamel en gebruik geen onnodige persoonsgegevens. Wanneer persoonsgegevens worden gebruikt, moeten deze veilig en volgens de regels worden verwerkt.
+De website is gemaakt voor sporters.
 
-### Copyright
+De website kan worden gebruikt door mensen die bijvoorbeeld:
 
-Ik mag niet zomaar afbeeldingen, logo's, video's of teksten van andere websites gebruiken. Ik gebruik daarom eigen materiaal of materiaal waarvoor ik toestemming heb of dat onder een geschikte licentie valt.
+- Naar de sportschool gaan
+- Voetballen
+- Hardlopen
+- Sterker willen worden
+- Willen afvallen
+- Hun conditie willen verbeteren
 
-### Licenties
+---
 
-Wanneer ik gebruikmaak van externe libraries, afbeeldingen of andere onderdelen, controleer ik de bijbehorende licentie. Ik gebruik alleen materiaal dat binnen mijn project gebruikt mag worden.
+# 4. Loginpagina 🔐
 
-### Wettelijke impact
+De eerste pagina van de website is de loginpagina.
 
-De informatie op de website moet duidelijk en correct worden weergegeven. Wanneer persoonsgegevens worden verwerkt, moet dit volgens de geldende wet- en regelgeving gebeuren.
+De gebruiker kan hier inloggen.
 
-### Maatschappelijke impact
+De pagina heeft:
 
-De website moet duidelijk en gebruiksvriendelijk zijn voor verschillende gebruikers. De wedstrijdeninformatie moet overzichtelijk worden weergegeven.
+- ZS Sport AI logo
+- Gebruikersnaam
+- Wachtwoord
+- Inlogknop
+- Welkomsttekst
+- Sportinformatie
+- Video achtergrond
 
-### Technische randvoorwaarden
+De video laat een sportieve omgeving zien.
 
-- De website moet responsive zijn.
-- De website moet werken in moderne browsers.
-- De wedstrijden moeten overzichtelijk worden weergegeven.
-- De website moet gebruiksvriendelijk zijn.
-- HTML, CSS en JavaScript worden op een duidelijke manier gebruikt.
-- De website wordt regelmatig getest.
+De achtergrond is donker gemaakt zodat de tekst goed zichtbaar is.
 
-## Begin- en einddatum
+Na het inloggen kan de gebruiker naar het dashboard.
 
-- **Begindatum:** [18/8/2026]
-- **Einddatum:** [25/8/2026]
+---
 
-# Leerdoelen
+# 5. Dashboard 🏠
 
-Met dit project wil ik mij technisch en persoonlijk verder ontwikkelen.
+Het dashboard is het hoofdscherm van de website.
 
-### Technische leerdoelen
+Vanaf het dashboard kan de gebruiker naar de verschillende onderdelen.
 
-- Ik wil mijn kennis van HTML verbeteren.
-- Ik wil mijn kennis van CSS verbeteren.
-- Ik wil leren hoe ik een responsive website maak.
-- Ik wil mijn kennis van JavaScript verbeteren.
-- Ik wil leren hoe ik wedstrijdinformatie overzichtelijk kan presenteren.
-- Ik wil leren hoe ik mijn website goed kan testen.
-- Ik wil leren hoe ik fouten in mijn code kan vinden en oplossen.
-- Ik wil leren hoe ik rekening houd met AVG, copyright en licenties.
+Het dashboard bevat bijvoorbeeld:
 
-### Werkprocessen
+- AI Sport Coach
+- Trainingen
+- Maaltijden
+- Sportrecords
+- Sportinformatie
 
-Tijdens dit project oefen ik de volgende werkprocessen:
+De gebruiker kan op een onderdeel klikken.
 
-- Een project plannen.
-- Een website ontwerpen.
-- HTML, CSS en JavaScript schrijven.
-- Functionaliteiten ontwikkelen.
-- Mijn website testen.
-- Problemen analyseren en oplossen.
-- Feedback verwerken.
-- Mijn werk documenteren.
-- Mijn eigen werk evalueren.
+Daarna gaat de gebruiker naar de juiste pagina.
 
-## Motivatie
+Er is ook een knop om terug te gaan naar het dashboard.
 
-> "Elke wedstrijd begint met een eerste stap. Door te blijven oefenen en leren, word ik steeds beter."
+---
 
-Ik wil dit project gebruiken om mijn vaardigheden als softwareontwikkelaar verder te ontwikkelen en een sportwebsite te maken die duidelijk, modern en gebruiksvriendelijk is.
+# 6. AI Sport Coach 🤖
+
+Een belangrijk onderdeel van de website is de AI Sport Coach.
+
+De AI Sport Coach helpt de gebruiker met zijn training.
+
+De gebruiker kan zijn gegevens invullen.
+
+Bijvoorbeeld:
+
+- Naam
+- Leeftijd
+- Gewicht
+- Sportdoel
+
+Daarna kiest de gebruiker een doel.
+
+Bijvoorbeeld:
+
+- Spieropbouw
+- Afvallen
+- Conditie
+- Voetbal
+- Hardlopen
+
+Daarna kan de gebruiker een trainingsschema laten maken.
+
+---
+
+# 7. Trainingspagina 💪
+
+De trainingspagina geeft de gebruiker oefeningen.
+
+Voorbeelden van oefeningen zijn:
+
+- Bench Press
+- Squat
+- Push Ups
+- Lunges
+- Plank
+- Burpees
+- Sprint
+- Hardlopen
+- Mountain Climbers
+
+De gebruiker krijgt een schema met verschillende oefeningen.
+
+Niet iedere training hoeft hetzelfde te zijn.
+
+JavaScript kan verschillende schema's gebruiken.
+
+---
+
+# 8. Oefeningen afvinken ✅
+
+De gebruiker kan een oefening afvinken als deze klaar is.
+
+Bijvoorbeeld:
+
+```text
+☑ Squat
+☑ Bench Press
+☐ Push Ups
+☐ Plank
