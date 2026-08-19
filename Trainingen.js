@@ -1,249 +1,217 @@
-function genereerTraining() {
+function genereerTraining(){
 
-  const naam =
-  document.getElementById("naam").value || "Sporter";
+    const naam =
+    document.getElementById("naam").value || "Sporter";
 
-  const doel =
-  document.getElementById("doel").value;
+    const doel =
+    document.getElementById("doel").value;
 
-  const schemas = {
+    const schemas = {
 
-    spieropbouw: [
+        spieropbouw:[
 
-      [
-        "Bench Press - 4x10",
-        "Incline Dumbbell Press - 3x12",
-        "Chest Fly - 3x12",
-        "Dips - 3x10",
-        "Push Ups - 3x20"
-      ],
+            [
+                "Bench Press - 4x10",
+                "Incline Dumbbell Press - 3x12",
+                "Chest Fly - 3x12",
+                "Dips - 3x10",
+                "Push Ups - 3x20"
+            ],
 
-      [
-        "Squat - 4x10",
-        "Leg Press - 3x12",
-        "Lunges - 3x12",
-        "Calf Raises - 3x20",
-        "Plank - 3x60 sec"
-      ]
+            [
+                "Squat - 4x10",
+                "Leg Press - 3x12",
+                "Lunges - 3x12",
+                "Calf Raises - 3x20",
+                "Plank - 3x60 sec"
+            ]
+        ],
 
-    ],
+        afvallen:[
 
-    afvallen: [
+            [
+                "Hardlopen - 30 min",
+                "Burpees - 4x15",
+                "Mountain Climbers - 4x30 sec",
+                "Jump Squats - 4x15",
+                "Plank - 3x60 sec"
+            ],
 
-      [
-        "Hardlopen - 30 min",
-        "Burpees - 4x15",
-        "Mountain Climbers - 4x30 sec",
-        "Jump Squats - 4x15",
-        "Plank - 3x60 sec"
-      ],
+            [
+                "Fietsen - 45 min",
+                "Jump Rope - 15 min",
+                "Push Ups - 4x15",
+                "Squats - 4x20",
+                "Crunches - 3x25"
+            ]
+        ],
 
-      [
-        "Fietsen - 45 min",
-        "Jump Rope - 15 min",
-        "Push Ups - 4x15",
-        "Squats - 4x20",
-        "Crunches - 3x25"
-      ]
+        conditie:[
 
-    ],
+            [
+                "5 KM Hardlopen",
+                "Interval Training",
+                "Sprint Training",
+                "Cooling Down",
+                "Stretching"
+            ],
 
-    conditie: [
+            [
+                "Fietsen - 60 min",
+                "Roeien - 20 min",
+                "Traplopen",
+                "Sprint Intervallen",
+                "Core Training"
+            ]
+        ],
 
-      [
-        "5 KM Hardlopen",
-        "Sprint Training",
-        "Interval Run",
-        "Cooling Down",
-        "Stretching"
-      ],
+        voetbal:[
 
-      [
-        "Fietsen - 60 min",
-        "Roeien - 20 min",
-        "Traplopen",
-        "Sprint Intervallen",
-        "Core Training"
-      ]
+            [
+                "Balcontrole",
+                "Pass Oefeningen",
+                "Sprint Training",
+                "Schieten",
+                "Positiespel"
+            ],
 
-    ],
+            [
+                "Dribbelen",
+                "Korte Passes",
+                "Sprinten",
+                "Wedstrijdtraining",
+                "1 tegen 1"
+            ]
+        ],
 
-    voetbal: [
+        hardlopen:[
 
-      [
-        "Balcontrole",
-        "Pass Oefeningen",
-        "Sprint Training",
-        "Schieten",
-        "Positiespel"
-      ],
+            [
+                "5 KM Rustig Tempo",
+                "10x 200m Sprint",
+                "8 KM Duurloop",
+                "Cooling Down",
+                "Stretching"
+            ],
 
-      [
-        "Dribbelen",
-        "1 tegen 1",
-        "Sprinten",
-        "Korte Passes",
-        "Wedstrijdtraining"
-      ]
+            [
+                "3 KM Warming Up",
+                "Tempo Run",
+                "Interval Training",
+                "Core Training",
+                "Herstel Wandeling"
+            ]
+        ]
+    };
 
-    ],
+    const lijst = schemas[doel];
 
-    hardlopen: [
+    const randomSchema =
+    lijst[Math.floor(Math.random()*lijst.length)];
 
-      [
-        "5 KM Rustig Tempo",
-        "10x 200m Sprint",
-        "8 KM Duurloop",
-        "Cooling Down",
-        "Stretching"
-      ],
+    let oefeningen = "";
 
-      [
-        "3 KM Warming Up",
-        "Interval Training",
-        "6 KM Tempo Run",
-        "Core Training",
-        "Herstel Wandeling"
-      ]
+    randomSchema.forEach(item => {
 
-    ]
+        oefeningen += `
 
-  };
+        <div class="exercise">
 
-  const lijst =
-  schemas[doel];
+            <label>
 
-  const randomSchema =
-  lijst[Math.floor(Math.random() * lijst.length)];
+                <input
+                type="checkbox"
+                class="exercise-check">
 
-  let oefeningen = "";
+                ${item}
 
-  randomSchema.forEach(item => {
+            </label>
 
-    oefeningen += `
+        </div>
 
-      <div class="exercise">
+        `;
+    });
 
-        <label>
+    document.getElementById("schema").innerHTML = `
 
-          <input
-            type="checkbox"
-            class="exercise-check"
-          >
+        <h3>Welkom ${naam} 👋</h3>
 
-          ${item}
+        <br>
 
-        </label>
+        <div class="progress-box">
 
-      </div>
+            <p>
+            Voltooid:
+            <span id="doneCount">
+            0/${randomSchema.length}
+            </span>
+            </p>
 
+            <br>
+
+            <div class="progress-bar">
+
+                <div id="progressFill"></div>
+
+            </div>
+
+        </div>
+
+        ${oefeningen}
     `;
 
-  });
-
-  document.getElementById("schema").innerHTML = `
-
-    <h2>
-      Welkom ${naam} 👋
-    </h2>
-
-    <p>
-      Jouw AI trainingsschema is gegenereerd.
-    </p>
-
-    <br>
-
-    <div class="progress-box">
-
-      <div class="progress-text">
-
-        Voltooid:
-        <span id="doneCount">
-          0/5
-        </span>
-
-      </div>
-
-      <div class="progress-bar">
-
-        <div id="progressFill"></div>
-
-      </div>
-
-    </div>
-
-    <br>
-
-    ${oefeningen}
-
-  `;
-
-  voegCheckboxEventsToe();
+    voegEventsToe();
 }
 
-function voegCheckboxEventsToe() {
+function voegEventsToe(){
 
-  const checks =
-  document.querySelectorAll(".exercise-check");
+    const checks =
+    document.querySelectorAll(".exercise-check");
 
-  checks.forEach(check => {
+    checks.forEach(check => {
 
-    check.addEventListener(
-      "change",
-      updateProgress
+        check.addEventListener(
+        "change",
+        updateProgress
+        );
+
+    });
+}
+
+function updateProgress(){
+
+    const checks =
+    document.querySelectorAll(".exercise-check");
+
+    const checked =
+    document.querySelectorAll(
+    ".exercise-check:checked"
     );
 
-  });
+    const totaal =
+    checks.length;
 
-}
+    const gedaan =
+    checked.length;
 
-function updateProgress() {
-
-  const checks =
-  document.querySelectorAll(".exercise-check");
-
-  const checked =
-  document.querySelectorAll(
-    ".exercise-check:checked"
-  );
-
-  const totaal =
-  checks.length;
-
-  const gedaan =
-  checked.length;
-
-  document.getElementById(
+    document.getElementById(
     "doneCount"
-  ).innerText =
-  `${gedaan}/${totaal}`;
+    ).innerText =
+    `${gedaan}/${totaal}`;
 
-  const percentage =
-  (gedaan / totaal) * 100;
-
-  document.getElementById(
+    document.getElementById(
     "progressFill"
-  ).style.width =
-  percentage + "%";
+    ).style.width =
+    ((gedaan/totaal)*100) + "%";
 
-  if(gedaan === totaal && totaal > 0){
+    if(gedaan === totaal && totaal > 0){
 
-    setTimeout(() => {
+        setTimeout(() => {
 
-      alert(
-        "🏆 Goed gedaan! Training voltooid!"
-      );
+            alert(
+            "🏆 Training voltooid! Goed bezig!"
+            );
 
-    }, 300);
-
-  }
-
+        }, 300);
+    }
 }
-
-window.addEventListener("load", () => {
-
-  console.log(
-    "ZS Sport AI Trainingscoach geladen"
-  );
-
-});
