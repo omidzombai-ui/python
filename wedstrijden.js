@@ -17,8 +17,6 @@ function addRecord(){
   Number(
     document.getElementById("reps").value
   );
-
-
   /* CONTROLEREN */
 
   if(
