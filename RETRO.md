@@ -37,4 +37,4 @@ Daarna wil ik de pagina stap voor stap bouwen en vaker testen.
 Conclusie
 
 Ik ben blij met mijn voortgang. De wedstrijdenpagina is een belangrijk onderdeel van mijn ZS Sport AI website.
-n de toekomst wil ik een paar wijzigingen toevoegen. Ook wil ik mijn spelling verbeteren en de tekst op de pagina controleren.
+in de toekomst wil ik een paar wijzigingen toevoegen. Ook wil ik mijn spelling verbeteren en de tekst op de pagina controleren.
