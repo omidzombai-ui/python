@@ -1,24 +1,82 @@
 <!DOCTYPE html>
+
 <html lang="nl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Maaltijden - ZS Sport AI</title>
-  <style>
-    body { font-family: Inter, sans-serif; margin: 0; background: #0f172a; color: #f8fafc; display: flex; align-items: center; justify-content: center; min-height: 100vh; }
-    .page { width: min(1000px, 90%); background: rgba(15, 23, 42, 0.95); border: 1px solid rgba(148, 163, 184, 0.15); border-radius: 24px; padding: 3rem; box-shadow: 0 24px 80px rgba(15, 23, 42, 0.45); }
-    a { color: #38bdf8; text-decoration: none; font-weight: 600; }
-    h1 { margin-top: 0; font-size: clamp(2rem, 3vw, 3rem); }
-    p { line-height: 1.8; color: #cbd5e1; }
-    .button { display: inline-flex; align-items: center; gap: 0.5rem; margin-top: 1.5rem; padding: 0.9rem 1.5rem; border: 1px solid #38bdf8; border-radius: 999px; color: #38bdf8; }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZS Sport AI - Maaltijden</title>
+  <link rel="stylesheet" href="maaltijden.css">
 </head>
+
 <body>
-  <div class="page">
-    <a class="button" href="dashboard.html">← Terug naar Dashboard</a>
-    <h1>Maaltijden</h1>
-    <p>Dit is de maaltijdpagina. Hier kun je jouw AI-gegenereerde sportmaaltijden bekijken.</p>
-    <p>De navigatieknoppen werken nu als echte pagina-links.</p>
+
+  <!-- Video achtergrond -->
+
+  <div class="video-background">
+    <video autoplay muted loop playsinline>
+      <source src="gym-video.mp4" type="video/mp4">
+    </video>
+    <div class="video-overlay"></div>
   </div>
+
+  <!-- Pagina -->
+
+  <main class="container">
+
+```
+<a href="dashboard.html" class="back-button">
+  ← Terug naar dashboard
+</a>
+
+<section class="hero">
+  <span class="badge">🥗 AI Voedingscoach</span>
+
+  <h1>Sport & Maaltijden</h1>
+
+  <p>
+    Kies jouw sportdoel en krijg gezonde maaltijdideeën
+    die passen bij jouw training.
+  </p>
+</section>
+
+<!-- Doel kiezen -->
+<section class="meal-generator">
+
+  <h2>🍽️ Kies jouw doel</h2>
+
+  <select id="doel">
+    <option value="spieropbouw">💪 Spieropbouw</option>
+    <option value="afvallen">🔥 Afvallen</option>
+    <option value="conditie">🏃 Conditie</option>
+    <option value="voetbal">⚽ Voetbal</option>
+    <option value="hardlopen">🏃 Hardlopen</option>
+  </select>
+
+  <button onclick="genereerMaaltijden()">
+    🤖 Genereer maaltijden
+  </button>
+
+</section>
+
+<!-- Maaltijden -->
+<section class="meals-section">
+
+  <h2>🍴 Jouw maaltijdadvies</h2>
+
+  <div id="maaltijden" class="meals-grid">
+
+    <div class="empty-message">
+      Kies jouw doel en klik op "Genereer maaltijden".
+    </div>
+
+  </div>
+
+</section>
+```
+
+  </main>
+
+  <script src="maaltijden.js"></script>
+
 </body>
 </html>
