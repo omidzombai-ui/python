@@ -1,24 +1,257 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Prestaties - ZS Sport AI</title>
-  <style>
-    body { font-family: Inter, sans-serif; margin: 0; background: #0f172a; color: #f8fafc; display: flex; align-items: center; justify-content: center; min-height: 100vh; }
-    .page { width: min(1000px, 90%); background: rgba(15, 23, 42, 0.95); border: 1px solid rgba(148, 163, 184, 0.15); border-radius: 24px; padding: 3rem; box-shadow: 0 24px 80px rgba(15, 23, 42, 0.45); }
-    a { color: #38bdf8; text-decoration: none; font-weight: 600; }
-    h1 { margin-top: 0; font-size: clamp(2rem, 3vw, 3rem); }
-    p { line-height: 1.8; color: #cbd5e1; }
-    .button { display: inline-flex; align-items: center; gap: 0.5rem; margin-top: 1.5rem; padding: 0.9rem 1.5rem; border: 1px solid #38bdf8; border-radius: 999px; color: #38bdf8; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZS Sport AI - Prestaties</title>
+    <link rel="stylesheet" href="../CSS/prestaties.css">
 </head>
+
 <body>
-  <div class="page">
-    <a class="button" href="dashboard.html">← Terug naar Dashboard</a>
-    <h1>Prestaties</h1>
-    <p>Dit is de prestatiepagina. Hier kun je je voortgang, statistieken en AI-analyse vinden.</p>
-    <p>De knop in het dashboard verwijs nu naar een echte pagina.</p>
-  </div>
+
+    <!-- Video achtergrond -->
+    <div class="video-background">
+        <video autoplay muted loop playsinline>
+            <source src="../mp4/gym-video.mp4" type="video/mp4">
+        </video>
+
+        <div class="video-overlay"></div>
+    </div>
+
+    <main class="container">
+
+        <!-- Terug naar dashboard -->
+        <a href="../HTML/dashboard.html" class="back-button">
+            ← Terug naar dashboard
+        </a>
+
+        <!-- Header -->
+        <section class="hero">
+            <span class="badge">📈 Mijn voortgang</span>
+
+            <h1>Prestaties</h1>
+
+            <p>
+                Bekijk jouw sportprestaties, records en vooruitgang.
+            </p>
+        </section>
+
+        <!-- Overzicht -->
+        <section class="stats">
+
+            <div class="stat-card">
+                <span class="stat-icon">🏆</span>
+                <h3>Beste record</h3>
+                <strong id="besteRecord">100 kg</strong>
+                <p>Bankdrukken</p>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-icon">💪</span>
+                <h3>Vooruitgang</h3>
+                <strong id="vooruitgang">+10 kg</strong>
+                <p>Deze maand</p>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-icon">🔥</span>
+                <h3>Trainingen</h3>
+                <strong id="trainingen">12</strong>
+                <p>Deze maand</p>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-icon">📅</span>
+                <h3>Trainingsdagen</h3>
+                <strong id="dagen">8</strong>
+                <p>Deze maand</p>
+            </div>
+
+        </section>
+
+        <!-- Records -->
+        <section class="card">
+            <div class="section-title">
+                <div>
+                    <span class="small-badge">🏋️ Records</span>
+                    <h2>Oude en nieuwe records</h2>
+                </div>
+            </div>
+
+            <div class="records-table">
+
+                <div class="record-row header">
+                    <span>Oefening</span>
+                    <span>Oud</span>
+                    <span>Nieuw</span>
+                    <span>Verschil</span>
+                </div>
+
+                <div class="record-row">
+                    <span>Bankdrukken</span>
+                    <span>90 kg</span>
+                    <span>100 kg</span>
+                    <span class="positive">+10 kg</span>
+                </div>
+
+                <div class="record-row">
+                    <span>Squat</span>
+                    <span>100 kg</span>
+                    <span>110 kg</span>
+                    <span class="positive">+10 kg</span>
+                </div>
+
+                <div class="record-row">
+                    <span>Deadlift</span>
+                    <span>120 kg</span>
+                    <span>130 kg</span>
+                    <span class="positive">+10 kg</span>
+                </div>
+
+                <div class="record-row">
+                    <span>Shoulder Press</span>
+                    <span>45 kg</span>
+                    <span>50 kg</span>
+                    <span class="positive">+5 kg</span>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Trainingsvoortgang -->
+        <section class="card">
+
+            <span class="small-badge">📊 Voortgang</span>
+
+            <h2>Mijn trainingsvoortgang</h2>
+
+            <div class="progress-item">
+                <div class="progress-info">
+                    <span>Spieropbouw</span>
+                    <strong>80%</strong>
+                </div>
+
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 80%;"></div>
+                </div>
+            </div>
+
+            <div class="progress-item">
+                <div class="progress-info">
+                    <span>Kracht</span>
+                    <strong>70%</strong>
+                </div>
+
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 70%;"></div>
+                </div>
+            </div>
+
+            <div class="progress-item">
+                <div class="progress-info">
+                    <span>Conditie</span>
+                    <strong>60%</strong>
+                </div>
+
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 60%;"></div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Trainingsgeschiedenis -->
+        <section class="card">
+
+            <span class="small-badge">📅 Geschiedenis</span>
+
+            <h2>Mijn trainingen</h2>
+
+            <div class="training-list">
+
+                <div class="training-item">
+                    <div>
+                        <strong>💪 Krachttraining</strong>
+                        <p>Bankdrukken, squat en deadlift</p>
+                    </div>
+
+                    <span>Vandaag</span>
+                </div>
+
+                <div class="training-item">
+                    <div>
+                        <strong>🏃 Conditietraining</strong>
+                        <p>Hardlopen en cardio</p>
+                    </div>
+
+                    <span>Gisteren</span>
+                </div>
+
+                <div class="training-item">
+                    <div>
+                        <strong>💪 Spieropbouw</strong>
+                        <p>Borst, schouders en armen</p>
+                    </div>
+
+                    <span>2 dagen geleden</span>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Nieuwe prestatie -->
+        <section class="card add-card">
+
+            <span class="small-badge">➕ Nieuwe prestatie</span>
+
+            <h2>Voeg een prestatie toe</h2>
+
+            <div class="form">
+
+                <input
+                    type="text"
+                    id="oefening"
+                    placeholder="Naam oefening"
+                >
+
+                <input
+                    type="number"
+                    id="gewicht"
+                    placeholder="Gewicht in kg"
+                >
+
+                <button onclick="voegPrestatieToe()">
+                    Prestatie toevoegen
+                </button>
+
+            </div>
+
+            <p id="melding"></p>
+
+        </section>
+
+        <!-- Afsluiting -->
+        <section class="final-card">
+
+            <div class="final-icon">🔥</div>
+
+            <h2>Blijf doorgaan!</h2>
+
+            <p>
+                Elke training is een stap vooruit.
+                Werk verder aan jouw doelen en verbeter je records.
+            </p>
+
+            <a href="../HTML/trainingen.html" class="main-button">
+                💪 Naar trainingen
+            </a>
+
+        </section>
+
+    </main>
+
+    <script src="prestaties.js"></script>
+
 </body>
 </html>
