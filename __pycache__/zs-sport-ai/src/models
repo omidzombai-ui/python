@@ -1,0 +1,46 @@
+<?php
+
+class SportModel {
+    private $pdo;
+
+    public function __construct($pdo) {
+        $this->pdo = $pdo;
+    }
+
+    public function getAllSports() {
+        $stmt = $this->pdo->prepare("SELECT * FROM sports");
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public function getSportById($id) {
+        $stmt = $this->pdo->prepare("SELECT * FROM sports WHERE id = :id");
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+        $stmt->execute();
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
+
+    public function createSport($data) {
+        $stmt = $this->pdo->prepare("INSERT INTO sports (name, description) VALUES (:name, :description)");
+        $stmt->bindParam(':name', $data['name']);
+        $stmt->bindParam(':description', $data['description']);
+        return $stmt->execute();
+    }
+
+    public function updateSport($id, $data) {
+        $stmt = $this->pdo->prepare("UPDATE sports SET name = :name, description = :description WHERE id = :id");
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+        $stmt->bindParam(':name', $data['name']);
+        $stmt->bindParam(':description', $data['description']);
+        return $stmt->execute();
+    }
+
+    public function deleteSport($id) {
+        $stmt = $this->pdo->prepare("DELETE FROM sports WHERE id = :id");
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+        return $stmt->execute();
+    }
+}
+
+$sportModel = new SportModel($pdo);
+?>
