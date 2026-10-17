@@ -1,4 +1,6 @@
 <?php
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
 
 $host = "localhost";
 $dbname = "zs_sport_ai";
@@ -17,8 +19,10 @@ try {
         PDO::ERRMODE_EXCEPTION
     );
 
+    echo "Verbinding met de database is gelukt!";
+
 } catch (PDOException $e) {
-    error_log($e->getMessage());
-    exit("Verbinding met de database is niet gelukt.");
+    echo "Databaseverbinding mislukt: "
+        . htmlspecialchars($e->getMessage());
 }
 ?>
