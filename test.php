@@ -1,5 +1,4 @@
-<?php
-require "db.php";
 
-echo "Verbinding met MySQL is gelukt!";
+<?php
+echo "PHP werkt goed!";
 ?>
